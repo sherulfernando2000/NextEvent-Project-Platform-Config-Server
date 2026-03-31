@@ -1,10 +1,17 @@
-# Config-Server
+# Config-Server (NextEvent Project)
 
-Centralized external configuration server for the ECA microservices ecosystem. It serves configuration properties to all registered services from a single source, enabling environment-specific settings without redeployment.
+Centralized Configuration Server for the NextEvent Microservices Ecosystem. This server acts as the "Single Source of Truth," providing externalized configuration to the Event, Participant, and Registration services, as well as the API Gateway and Service Registry
+
+## Student Information
+
+- Student Name: Sherul Dhanushka Fernando
+- Student Number: 2301691014
+- Slack Handle: https://ijse-eca-hdse-69-70.slack.com/team/U0AEH8NS9DW
+- GCP Project ID: project-0ae0d75b-3979-4ebf-be9
 
 ## About
 
-This project is part of the Enterprise Cloud Application (ECA) module in the Higher Diploma in Software Engineering (HDSE) program at the Institute of Software Engineering (IJSE). It is intended exclusively for students enrolled in this program.
+The Config-Server is a critical infrastructure component of the NextEvent system. It allows the entire ecosystem to be managed dynamically. Instead of hardcoding database credentials or service URLs inside each individual microservice JAR, this server serves those properties over HTTP.
 
 ## Tech Stack
 
@@ -29,9 +36,9 @@ src/main/resources/configurations/
 │   ├── api-gateway.yaml      # Api-Gateway routes & CORS config
 │   └── service-registry.yaml # Eureka server settings
 └── services/
-    ├── student-service.yaml  # Student-Service datasource (PostgreSQL)
-    ├── program-service.yaml  # Program-Service datasource (MongoDB)
-    └── registration-service.yaml # Enrollment-Service datasource (MySQL)
+    ├── participant-service.yaml  # Participant-Service datasource (PostgreSQL)
+    ├── event-service.yaml  # Event-Service datasource (MongoDB)
+    └── registration-service.yaml # Registration-Service datasource (MySQL)
 ```
 
 ## Service Details
